@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+}
+
+:root{
+    /* Colors */
+
+    /* THEME 1 */
+
+    /* # Backgrounds */
+
+    --theme-body-bg: hsl(222, 26%, 31%);
+    --toggle-keypad-bg: hsl(223, 31%, 20%);
+    --theme-screen-bg: hsl(224, 36%, 15%);
+
+    /* # Keys */
+
+    --del-res-bg: hsl(225, 21%, 49%);
+    --del-res-border-shadow: hsl(224, 28%, 35%);
+
+    --equals-toggler-bg: hsl(6, 63%, 50%);
+    --equals-toggler-border-shadow: hsl(6, 70%, 34%);
+
+    --keys-bg: hsl(30, 25%, 89%);
+    --keys-border-shadow: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --keys-font-clr: hsl(221, 14%, 31%);
+    --header-white: hsl(0, 0%, 100%);
+    --equals-white: hsl(0, 0%, 100%);
+    --White: hsl(0, 0%, 100%);
+
+    --attr-white: white;
+
+    --trans: all .3s ease-in-out;
+
+}
+
+/* utils */
+.grid-rows{
+    display: grid;
+    gap: 16px;
+}
+.flex-column{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.theme3{
+    /* # Backgrounds */
+
+    --theme-body-bg: hsl(268, 75%, 9%);
+    --toggle-keypad-bg: hsl(268, 71%, 12%);
+    --theme-screen-bg: hsl(268, 71%, 12%);
+
+    /* Keys */
+
+    --del-res-bg: hsl(281, 89%, 26%);
+    --del-res-border-shadow: hsl(285, 91%, 52%);
+
+    --equals-toggler-bg: hsl(176, 100%, 44%);
+    --equals-toggler-border-shadow: hsl(177, 92%, 70%);
+
+    --keys-bg: hsl(268, 47%, 21%);
+    --keys-border-shadow: hsl(290, 70%, 36%);
+
+    /* Text */
+
+    --keys-font-clr: hsl(52, 100%, 62%);
+    --header-white: hsl(52, 100%, 62%);
+    --equals-white: hsl(198, 20%, 13%);
+    --White: hsl(0, 0%, 100%);
+
+    --attr-black: white;
+
+}
+.theme2{
+    /* # Backgrounds */
+
+    --theme-body-bg: hsl(0, 0%, 90%);
+    --toggle-keypad-bg: hsl(0, 5%, 81%);
+    --theme-screen-bg: hsl(0, 0%, 93%);
+
+    /* Keys */
+
+    --del-res-bg: hsl(185, 42%, 37%);
+    --del-res-border-shadow: hsl(185, 58%, 25%);
+
+    --equals-toggler-bg: hsl(25, 98%, 40%);
+    --equals-toggler-border-shadow: hsl(25, 99%, 27%);
+
+    --keys-bg: hsl(45, 7%, 89%);
+    --keys-border-shadow: hsl(35, 11%, 61%);
+
+    /* Text */
+
+    --keys-font-clr: hsl(60, 10%, 19%);
+    --header-white: hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+
+    --attr-white: var(--equals-toggler-bg);
+    --atrr-black: white;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--theme-body-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--trans);
+}
+.container{
+    padding-inline: 16px;
+}
+
+/* HEADER */
+.header{
+    color: var(--header-white);
+}
+.header h1{
+    font-size: 32px;
+}
+
+/* theme toggler */
+
+.theme-container{
+    display: flex;
+    align-items: end;
+    gap: 16px;
+}
+.theme-container label{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: translateY(-6px);
+}
+.theme-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.theme-wrapper label{
+    text-align: center;
+    cursor: pointer;
+}
+.togglers{
+    grid-column: 1 / -1;
+    background: var(--toggle-keypad-bg);
+    border-radius: 100vmax;
+    padding: 0 4px;
+    height: 24px;
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+.togglers input{
+    cursor: pointer;
+    opacity: 0;
+}
+.toggler{
+    width: 15px;
+    height: 15px;
+    background: var(--equals-toggler-bg);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .3s;
+}
+.toggler.theme2pos{
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggler.theme3pos{
+    right: 4px;
+}
+.toggler.theme1pos{
+    left: 4px;
+}
+
+/* theme toggler */
+
+/* RESULTS SCREEN */
+.result{
+    background: var(--theme-screen-bg);
+    padding: 0 16px;
+    border-radius: 6px;
+}
+.result input{
+    width: 100%;
+    height: 70px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    color: var(--header-white);
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* KEYS */
+.keys-container{
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    background: var(--toggle-keypad-bg);
+    padding: 16px;
+    border-radius: 6px;
+}
+.keys-container .keys{
+    color: var(--keys-font-clr);
+    background: var(--keys-bg);
+    box-shadow: 0 4px var(--keys-border-shadow);
+} 
+.keys-container .btns{
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.keys-container .white{
+    color: var(--White);
+}
+.keys-container .del-res{
+    background: var(--del-res-bg);
+    font-size: 24px;
+    box-shadow:  0 4px var(--del-res-border-shadow);
+}
+.keys-container input{
+    border: 0;
+    background: none;
+    grid-column: span 2;
+}
+.keys-container .equals{
+    color: var(--equals-white);
+    background: var(--equals-toggler-bg);
+    box-shadow: 0 4px var(--equals-toggler-border-shadow);
+    grid-column: span 2;
+}
+
+/* attribution */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--atrr-black);
+}
+.attribution a { 
+    color: var(--attr-white);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Calculator App</title>
+  
+</head>
+<body>
+  <section class="container grid-rows">
+    <header class="header flex-column">
+      <h1>calc</h1>
+      <div class="theme-container">
+        <label for="theme1">theme</label>
+        <span class="theme-wrapper">
+          <label for="theme1">1</label>
+          <label for="theme2">2</label>
+          <label for="theme3">3</label>
+
+          <span class="togglers">
+            <input type="radio" id="theme1" name="themeTogglers" checked>
+            <input type="radio" id="theme2" name="themeTogglers">
+            <input type="radio" id="theme3" name="themeTogglers">
+            <span class="toggler"></span>
+          </span>
+        </span>
+      </div>
+    </header>
+
+    <form action="#"  class="calc-container grid-rows">
+      <div class="result">
+        <input type="text">
+      </div>
+      
+      <div class="keys-container grid-rows">
+        <span class="keys btns">7</span>
+        <span class="keys btns">8</span>
+        <span class="keys btns">9</span>
+        <span class="btns white del-res delete">DEL</span>
+        <span class="keys btns">4</span>
+        <span class="keys btns">5</span>
+        <span class="keys btns">6</span>
+        <span class="keys btns">+</span>
+        <span class="keys btns">1</span>
+        <span class="keys btns">2</span>
+        <span class="keys btns">3</span>
+        <span class="keys btns">-</span>
+        <span class="keys btns">.</span>
+        <span class="keys btns">0</span>
+        <span class="keys btns">/</span>
+        <span class="keys btns times">*</span>
+        <input type="reset" class="btns white del-res" value="RESET">
+        <span class="btns white equals">=</span>
+      </div>
+    </form>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Caleb Ariko</a>.
+    </div>
+  </section>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
