@@ -18,7 +18,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Solution URL: (calculatorapp.netlify.app)
+- Live site URL: (https://calculatorappfem.netlify.app)
 
 
 ### Built with
@@ -31,4 +31,5 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ## Author
 
+- github - https://github.com/calebariko
 - Email - calebouma202@gmail.com
